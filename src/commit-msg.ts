@@ -1,4 +1,3 @@
-import {CommandModule} from 'yargs';
 import {CommitMsgOptions} from './types';
 import {readFileSync} from 'fs';
 import lint from '@commitlint/lint';
@@ -32,9 +31,4 @@ const commitMsg = (_opts: CommitMsgOptions) => {
     });
 };
 
-module.exports = {
-  command: 'commit-msg',
-  describe: 'git hook for validating commit message',
-  builder: {},
-  handler: argv => commitMsg(argv),
-} as CommandModule<CommitMsgOptions, CommitMsgOptions>;
+export default commitMsg;

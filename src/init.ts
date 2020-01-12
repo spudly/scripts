@@ -1,4 +1,3 @@
-import {CommandModule} from 'yargs';
 import {InitOptions} from './types';
 import {copyFilesRecursive} from './utils';
 import ejs from 'ejs';
@@ -37,27 +36,4 @@ const init = (opts: InitOptions) => {
   );
 };
 
-module.exports = {
-  command: 'init <name>',
-  describe: 'init a new package',
-  builder: yargs => {
-    return yargs
-      .positional('name', {
-        type: 'string',
-        describe: 'the name of the package to init',
-      })
-      .option('user', {
-        type: 'string',
-        alias: 'u',
-        demandOption: true,
-        describe: 'github username',
-      })
-      .option('repo', {
-        type: 'string',
-        alias: 'r',
-        demandOption: true,
-        describe: 'github repository name',
-      });
-  },
-  handler: argv => init(argv),
-} as CommandModule<InitOptions, InitOptions>;
+export default init;

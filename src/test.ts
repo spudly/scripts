@@ -1,4 +1,3 @@
-import {CommandModule} from 'yargs';
 import {TestOptions} from './types';
 import {spawnSync} from 'child_process';
 
@@ -9,9 +8,4 @@ const test = (_opts: TestOptions) => {
   });
 };
 
-module.exports = {
-  command: 'test',
-  describe: 'test the package',
-  builder: {},
-  handler: argv => test(argv),
-} as CommandModule<TestOptions, TestOptions>;
+export default test;
