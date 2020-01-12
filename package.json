@@ -39,31 +39,32 @@
     "build"
   ],
   "dependencies": {
+    "@commitlint/config-conventional": "^8.3.4",
     "@commitlint/lint": "^8.3.4",
     "@commitlint/load": "^8.3.4",
-    "chalk": "^3.0.0",
-    "ejs": "^3.0.1",
-    "yargs": "^15.1.0"
-  },
-  "devDependencies": {
-    "@commitlint/config-conventional": "^8.3.4",
     "@semantic-release/changelog": "^3.0.6",
     "@semantic-release/git": "^8.0.0",
     "@spudly/eslint-config": "^6.0.0",
+    "chalk": "^3.0.0",
+    "ejs": "^3.0.1",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "semantic-release": "^16.0.1",
+    "sort-package-json": "^1.38.3",
+    "ts-jest": "^24.3.0",
+    "typescript": "^3.7.4",
+    "yargs": "^15.1.0"
+  },
+  "devDependencies": {
     "@types/ejs": "^3.0.0",
     "@types/jest": "^24.0.25",
     "@types/node": "^13.1.6",
     "@types/tmp": "^0.1.0",
     "eslint": "^6.8.0",
     "husky": "^4.0.6",
-    "jest": "^24.9.0",
-    "lint-staged": "^9.5.0",
-    "prettier": "^1.19.1",
-    "semantic-release": "^16.0.1",
-    "sort-package-json": "^1.38.3",
     "tmp": "^0.1.0",
-    "ts-jest": "^24.3.0",
-    "typescript": "^3.7.4"
+    "ts-node": "^8.6.1"
   },
   "publishConfig": {
     "access": "public"
