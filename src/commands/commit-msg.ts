@@ -1,4 +1,4 @@
-import {CommitMsgOptions} from './types';
+import {CommitMsgOptions} from '../types';
 import {readFileSync} from 'fs';
 import lint from '@commitlint/lint';
 import load, {Seed} from '@commitlint/load';

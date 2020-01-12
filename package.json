@@ -38,38 +38,6 @@
     "node_modules",
     "build"
   ],
-  "jest": {
-    "collectCoverageFrom": [
-      "**/*.ts",
-      "**/*.tsx",
-      "**/*.js",
-      "**/*.jsx",
-      "!**/node_modules/**"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/build/",
-      "[.]config[.]js",
-      "/coverage/",
-      "[.]stories[.]"
-    ],
-    "globals": {
-      "ts-jest": {
-        "isolatedModules": true
-      }
-    },
-    "testEnvironment": "node",
-    "testMatch": [
-      "**/*.test.[jt]s?(x)"
-    ],
-    "testPathIgnorePatterns": [
-      "build",
-      "[.]stories[.]"
-    ],
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    }
-  },
   "dependencies": {
     "@commitlint/lint": "^8.3.4",
     "@commitlint/load": "^8.3.4",

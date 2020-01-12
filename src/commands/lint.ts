@@ -1,4 +1,4 @@
-import {LintOptions} from './types';
+import {LintOptions} from '../types';
 import {spawnSync} from 'child_process';
 
 const lint = (_opts: LintOptions) => {

@@ -1,9 +1,11 @@
 // @ts-check
 import yargs from 'yargs';
-import build from './build';
-import commitMsg from './commit-msg';
-import init from './init';
-import lint from './lint';
+import build from './commands/build';
+import commitMsg from './commands/commit-msg';
+import init from './commands/init';
+import lint from './commands/lint';
+import preCommit from './commands/pre-commit';
+import test from './commands/test';
 import {
   BuildOptions,
   CommitMsgOptions,
@@ -12,8 +14,6 @@ import {
   TestOptions,
   LintOptions,
 } from './types';
-import preCommit from './pre-commit';
-import test from './test';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-expressions
 yargs

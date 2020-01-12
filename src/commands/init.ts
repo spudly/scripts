@@ -1,5 +1,5 @@
-import {InitOptions} from './types';
-import {copyFilesRecursive} from './utils';
+import {InitOptions} from '../types';
+import copyFilesRecursive from '../utils/copyFilesRecursive';
 import ejs from 'ejs';
 import {spawnSync} from 'child_process';
 import {resolve} from 'path';
