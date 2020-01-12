@@ -1,0 +1,123 @@
+{
+  "name": "@spudly/scripts",
+  "version": "2.1.1",
+  "description": "An opinionated npm package configurator",
+  "license": "ISC",
+  "author": "",
+  "files": [
+    "bin",
+    "build"
+  ],
+  "main": "build/index.js",
+  "bin": {
+    "spudly-scripts": "bin/scripts.js"
+  },
+  "scripts": {
+    "build": "ts-node src/index.ts build",
+    "lint": "ts-node src/index.ts lint",
+    "prepare": "npm run build",
+    "test": "ts-node src/index.ts test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "ts-node src/index.ts pre-commit",
+      "commit-msg": "ts-node src/index.ts commit-msg"
+    }
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "endOfLine": "lf",
+    "proseWrap": "always",
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "eslintConfig": {
+    "extends": "@spudly"
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "build"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.js",
+      "**/*.jsx",
+      "!**/node_modules/**"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/build/",
+      "[.]config[.]js",
+      "/coverage/",
+      "[.]stories[.]"
+    ],
+    "globals": {
+      "ts-jest": {
+        "isolatedModules": true
+      }
+    },
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/*.test.[jt]s?(x)"
+    ],
+    "testPathIgnorePatterns": [
+      "build",
+      "[.]stories[.]"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
+  },
+  "dependencies": {
+    "@commitlint/lint": "^8.3.4",
+    "deepmerge": "^4.2.2",
+    "ejs": "^3.0.1",
+    "yargs": "^15.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@semantic-release/changelog": "^3.0.6",
+    "@semantic-release/git": "^8.0.0",
+    "@spudly/eslint-config": "^6.0.0",
+    "@types/ejs": "^3.0.0",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^13.1.6",
+    "@types/react-dev-utils": "^9.0.2",
+    "@types/tmp": "^0.1.0",
+    "eslint": "^6.8.0",
+    "husky": "^4.0.6",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "semantic-release": "^16.0.1",
+    "sort-package-json": "^1.38.3",
+    "tmp": "^0.1.0",
+    "ts-jest": "^24.3.0",
+    "typescript": "^3.7.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  }
+}

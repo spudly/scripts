@@ -1,0 +1,70 @@
+{
+  "name": "<%= name %>",
+  "files": [
+    "bin",
+    "build"
+  ],
+  "scripts": {
+    "build": "spudly-scripts build",
+    "lint": "spudly-scripts lint",
+    "prepare": "npm run build",
+    "test": "spudly-scripts test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": [
+        "spudly-scripts pre-commit"
+      ],
+      "commit-msg": [
+        "spudly-scripts commit-msg"
+      ]
+    }
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "endOfLine": "lf",
+    "proseWrap": "always",
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "eslintConfig": {
+    "extends": "@spudly"
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "build"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.js",
+      "**/*.jsx",
+      "!**/node_modules/**"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/build/",
+      "[.]config[.]js",
+      "/coverage/",
+      "[.]stories[.]"
+    ],
+    "globals": {
+      "ts-jest": {
+        "isolatedModules": true
+      }
+    },
+    "testEnvironment": "node",
+    "testMatch": "**/*.test.[jt]s?(x)",
+    "testPathIgnorePatterns": [
+      "build",
+      "[.]stories[.]"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
