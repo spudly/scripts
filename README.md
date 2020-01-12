@@ -1,23 +1,20 @@
-# @spudly/config-config
+# @spudly/scripts
 
-<!-- config-config:badges-start -->
 <!-- prettier-ignore-start -->
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/spudly/config-config/build?style=flat-square)
-[![Codecov](https://img.shields.io/codecov/c/github/spudly/config-config?style=flat-square)](https://codecov.io/gh/spudly/config-config)
-[![version](https://img.shields.io/npm/v/@spudly/config-config.svg?style=flat-square)](https://www.npmjs.com/package/@spudly/config-config)
-[![downloads](https://img.shields.io/npm/dm/@spudly/config-config.svg?style=flat-square)](http://www.npmtrends.com/@spudly/config-config)
-[![NPM](https://img.shields.io/npm/l/@spudly/config-config?style=flat-square)](https://github.com/spudly/config-config/blob/master/LICENSE.md)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/spudly/scripts/build?style=flat-square)
+[![Codecov](https://img.shields.io/codecov/c/github/spudly/scripts?style=flat-square)](https://codecov.io/gh/spudly/scripts)
+[![version](https://img.shields.io/npm/v/@spudly/scripts.svg?style=flat-square)](https://www.npmjs.com/package/@spudly/scripts)
+[![downloads](https://img.shields.io/npm/dm/@spudly/scripts.svg?style=flat-square)](http://www.npmtrends.com/@spudly/scripts)
+[![NPM](https://img.shields.io/npm/l/@spudly/scripts?style=flat-square)](https://github.com/spudly/scripts/blob/master/LICENSE.md)
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
-[![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/spudly/config-config/blob/master/CODE_OF_CONDUCT.md)
+[![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/spudly/scripts/blob/master/CODE_OF_CONDUCT.md)
 
-[![Watch on GitHub](https://img.shields.io/github/watchers/spudly/config-config.svg?style=social)](https://github.com/spudly/config-config/watchers)
-[![Star on GitHub](https://img.shields.io/github/stars/spudly/config-config.svg?style=social)](https://github.com/spudly/config-config/stargazers)
-[![Tweet](https://img.shields.io/twitter/url/https/github.com/spudly/config-config.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20config-config%20https%3A%2F%2Fgithub.com%2Fspudly%2Fconfig-config)
+[![Watch on GitHub](https://img.shields.io/github/watchers/spudly/scripts.svg?style=social)](https://github.com/spudly/scripts/watchers)
+[![Star on GitHub](https://img.shields.io/github/stars/spudly/scripts.svg?style=social)](https://github.com/spudly/scripts/stargazers)
+[![Tweet](https://img.shields.io/twitter/url/https/github.com/spudly/scripts.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20scripts%20https%3A%2F%2Fgithub.com%2Fspudly%2Fscripts)
 <!-- prettier-ignore-end -->
-
-<!-- config-config:badges-end -->
 
 Configures all the configurations for you.
 
@@ -47,11 +44,11 @@ This package creates & maintains the following configurations:
 
 ## Installation
 
-`npm install --save-dev @spudly/config-config`
+`npm install --save-dev @spudly/scripts`
 
 ## Usage
 
-Just run `npx config-config`.
+Just run `npx scripts`.
 
 After the first run, you should rarely have to manually run it again because it
 registers itself as a pre-commit hook.
@@ -63,7 +60,7 @@ registers itself as a pre-commit hook.
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://www.stephensorensen.com/"><img src="https://avatars0.githubusercontent.com/u/487068?v=4" width="100px;" alt=""/><br /><sub><b>Stephen John Sorensen</b></sub></a><br /><a href="https://github.com/spudly/config-config/commits?author=spudly" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.stephensorensen.com/"><img src="https://avatars0.githubusercontent.com/u/487068?v=4" width="100px;" alt=""/><br /><sub><b>Stephen John Sorensen</b></sub></a><br /><a href="https://github.com/spudly/scripts/commits?author=spudly" title="Code">💻</a></td>
   </tr>
 </table>
 
