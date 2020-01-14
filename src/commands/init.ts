@@ -4,10 +4,10 @@ import ejs from 'ejs';
 import {spawnSync} from 'child_process';
 import {resolve} from 'path';
 
-const init = (opts: InitOptions) => {
+const init = (cwd: string, opts: InitOptions) => {
   copyFilesRecursive(
     resolve(__dirname, '../../template'),
-    process.cwd(),
+    cwd,
     (fileContents: string) => ejs.render(fileContents, opts),
   );
   spawnSync(
@@ -32,7 +32,7 @@ const init = (opts: InitOptions) => {
       'ts-jest',
       'typescript',
     ],
-    {cwd: process.cwd(), stdio: 'inherit'},
+    {cwd, stdio: 'inherit'},
   );
 };
 

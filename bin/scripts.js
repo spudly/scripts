@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require('../build');
+require('../build').default(process.cwd(), process.argv.slice(2));

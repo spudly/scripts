@@ -1,9 +1,9 @@
 import {LintOptions} from '../types';
 import {spawnSync} from 'child_process';
 
-const lint = (_opts: LintOptions) => {
+const lint = (cwd: string, _opts: LintOptions) => {
   spawnSync('npx', ['eslint', '.', '--ext', '.js,.jsx,.ts,.tsx'], {
-    cwd: process.cwd(),
+    cwd,
     stdio: 'inherit',
   });
 };

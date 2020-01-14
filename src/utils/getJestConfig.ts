@@ -24,6 +24,11 @@ const getJestConfig = () => ({
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },
+  watchPlugins: [
+    'jest-watch-typeahead/filename',
+    'jest-watch-typeahead/testname',
+  ],
+  watchPathIgnorePatterns: ['<rootDir>/node_modules/'],
 });
 
 export default getJestConfig;

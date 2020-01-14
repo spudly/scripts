@@ -1,9 +1,9 @@
 import {BuildOptions} from '../types';
 import {spawnSync} from 'child_process';
 
-const build = (_opts: BuildOptions) => {
+const build = (cwd: string, _opts: BuildOptions) => {
   spawnSync('npx', ['tsc'], {
-    cwd: process.cwd(),
+    cwd,
     stdio: 'inherit',
   });
 };

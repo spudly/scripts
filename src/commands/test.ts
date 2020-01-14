@@ -1,23 +1,27 @@
 import {TestOptions} from '../types';
 import jest from 'jest';
 import getJestConfig from '../utils/getJestConfig';
+import yargs from 'yargs';
 
-const test = (_opts: TestOptions) => {
+const test = (opts: yargs.Arguments<TestOptions>) => {
   process.env.BABEL_ENV = 'test';
   process.env.NODE_ENV = 'test';
 
-  const args: Array<string> = []; // TODO: allow user to pass args
+  const jestArgs = process.argv.slice(process.argv.indexOf('test') + 1);
+
   if (
     !process.env.CI &&
-    !args.includes('--watchAll') &&
-    !args.includes('--watchAll=false')
+    !jestArgs.includes('--watchAll') &&
+    !jestArgs.includes('--watchAll=false')
   ) {
-    args.push('--watch');
+    jestArgs.push('--watch');
   }
 
-  args.push('--config', JSON.stringify(getJestConfig()));
+  jestArgs.push('--config', JSON.stringify(getJestConfig()));
 
-  jest.run(args);
+  console.log(jestArgs.join(' '));
+
+  jest.run(jestArgs);
 };
 
 export default test;

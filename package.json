@@ -10,18 +10,19 @@
   ],
   "main": "build/index.js",
   "bin": {
-    "spudly-scripts": "bin/scripts.js"
+    "spudly-scripts": "bin/scripts.js",
+    "spudly-scripts-dev": "bin/scripts-dev.js"
   },
   "scripts": {
-    "build": "ts-node src/index.ts build",
-    "lint": "ts-node src/index.ts lint",
+    "build": "bin/scripts-dev.js build",
+    "lint": "bin/scripts-dev.js lint",
     "prepare": "npm run build",
-    "test": "ts-node src/index.ts test"
+    "test": "bin/scripts-dev.js test"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "ts-node src/index.ts pre-commit",
-      "commit-msg": "ts-node src/index.ts commit-msg"
+      "pre-commit": "bin/scripts-dev.js pre-commit",
+      "commit-msg": "bin/scripts-dev.js commit-msg"
     }
   },
   "prettier": {
@@ -48,6 +49,7 @@
     "chalk": "^3.0.0",
     "ejs": "^3.0.1",
     "jest": "^24.9.0",
+    "jest-watch-typeahead": "^0.4.2",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "semantic-release": "^16.0.1",
