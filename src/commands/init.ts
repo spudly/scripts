@@ -11,26 +11,14 @@ const init = (cwd: string, opts: InitOptions) => {
     (fileContents: string) => ejs.render(fileContents, opts),
   );
   spawnSync(
-    'npm install',
+    'npm',
     [
+      'install',
       '--save-dev',
-      '@commitlint/cli',
-      '@commitlint/config-conventional',
-      '@semantic-release/changelog',
-      '@semantic-release/git',
-      '@spudly/eslint-config',
       '@spudly/scripts',
       '@types/jest',
       '@types/node',
-      'eslint',
       'husky',
-      'jest',
-      'lint-staged',
-      'prettier',
-      'semantic-release',
-      'sort-package-json',
-      'ts-jest',
-      'typescript',
     ],
     {cwd, stdio: 'inherit'},
   );
