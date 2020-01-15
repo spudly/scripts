@@ -31,6 +31,12 @@ describe('init', () => {
     expect(JSON.parse(readFileSync(`${dir}/package.json`, 'utf8')))
       .toMatchInlineSnapshot(`
       Object {
+        "devDependencies": Object {
+          "@spudly/scripts": "^1.0.0",
+          "@types/jest": "^24.0.25",
+          "@types/node": "^13.1.6",
+          "husky": "^4.0.9",
+        },
         "eslintConfig": Object {
           "extends": "@spudly",
         },
@@ -69,6 +75,7 @@ describe('init', () => {
           "prepare": "npm run build",
           "test": "spudly-scripts test",
         },
+        "version": "0.0.0",
       }
     `);
   });
@@ -351,7 +358,9 @@ describe('init', () => {
 
       ## Installation
 
-      \\\\\`npm install --save-dev \\\\foo\\\\\`
+      \`\`\`bash
+      npm install --save-dev foo
+      \`\`\`
 
       <span style=\\"color: red\\">TODO: write this secion</span>
 
