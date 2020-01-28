@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/spudly/scripts/compare/v1.0.1...v1.0.2) (2020-01-28)
+
+
+### Bug Fixes
+
+* **manifest:** add template to files config ([42b6ea3](https://github.com/spudly/scripts/commit/42b6ea361551fd5f64a497debf0f8f4c0bae6fae))
+
 ## [1.0.1](https://github.com/spudly/scripts/compare/v1.0.0...v1.0.1) (2020-01-15)
 
 
