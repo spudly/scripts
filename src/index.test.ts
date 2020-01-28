@@ -32,10 +32,10 @@ describe('init', () => {
       .toMatchInlineSnapshot(`
       Object {
         "devDependencies": Object {
-          "@spudly/scripts": "^1.0.0",
-          "@types/jest": "^24.0.25",
-          "@types/node": "^13.1.6",
-          "husky": "^4.0.9",
+          "@spudly/scripts": "^1.0.1",
+          "@types/jest": "^25.1.0",
+          "@types/node": "^13.5.0",
+          "husky": "^4.2.1",
         },
         "eslintConfig": Object {
           "extends": "@spudly",
@@ -359,7 +359,7 @@ describe('init', () => {
       ## Installation
 
       \`\`\`bash
-      npm install --save-dev foo
+      npm install --save foo
       \`\`\`
 
       <span style=\\"color: red\\">TODO: write this secion</span>
