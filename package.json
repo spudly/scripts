@@ -6,7 +6,8 @@
   "author": "",
   "files": [
     "bin",
-    "build"
+    "build",
+    "template"
   ],
   "main": "build/index.js",
   "bin": {

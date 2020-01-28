@@ -37,7 +37,7 @@ repo %>%20https%3A%2F%2Fgithub.com%2F<%= user %>%2F<%= repo %>)
 ## Installation
 
 ```bash
-npm install --save-dev <%= name %>
+npm install --save <%= name %>
 ```
 
 <span style="color: red">TODO: write this secion</span>
