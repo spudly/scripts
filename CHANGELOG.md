@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/spudly/scripts/compare/v1.0.0...v1.0.1) (2020-01-15)
+
+
+### Bug Fixes
+
+* **readme:** fix escape strings in readme ([41179f2](https://github.com/spudly/scripts/commit/41179f282fc88418937680156026bd9de715921e))
+* **tests:** fix broken tests ([d2a5471](https://github.com/spudly/scripts/commit/d2a5471b079bacd0a966a8ffdee67128f3ab231d))
+* missing package.json version & dependency install ([cd0a887](https://github.com/spudly/scripts/commit/cd0a887cd95eb3abeadba8cacfbf88f9c7d45ffc))
+
 # 1.0.0 (2020-01-14)
 
 
