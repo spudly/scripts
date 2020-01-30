@@ -1,5 +1,5 @@
 import {TestOptions} from '../types';
-import jest from 'jest';
+import {run} from 'jest';
 import getJestConfig from '../utils/getJestConfig';
 import yargs from 'yargs';
 
@@ -21,7 +21,7 @@ const test = (opts: yargs.Arguments<TestOptions>) => {
 
   console.log(jestArgs.join(' '));
 
-  jest.run(jestArgs);
+  run(jestArgs);
 };
 
 export default test;

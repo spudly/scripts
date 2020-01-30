@@ -32,9 +32,9 @@ describe('init', () => {
       .toMatchInlineSnapshot(`
       Object {
         "devDependencies": Object {
-          "@spudly/scripts": "^1.0.1",
-          "@types/jest": "^25.1.0",
-          "@types/node": "^13.5.0",
+          "@spudly/scripts": "^1.0.2",
+          "@types/jest": "^25.1.1",
+          "@types/node": "^13.5.2",
           "husky": "^4.2.1",
         },
         "eslintConfig": Object {
@@ -58,6 +58,8 @@ describe('init', () => {
             ],
           },
         },
+        "main": "build/cjs/index.js",
+        "module": "build/esm/index.js",
         "name": "foo",
         "prettier": Object {
           "bracketSpacing": false,
@@ -83,17 +85,17 @@ describe('init', () => {
   test('tsconfig.json', () => {
     expect(readFileSync(`${dir}/tsconfig.json`, 'utf8')).toMatchInlineSnapshot(`
       "{
-        \\"include\\": [\\"src/**/*\\"],
+        \\"include\\": [\\"src/**/*\\", \\"@types/**/*\\"],
         \\"compilerOptions\\": {
+          \\"allowJs\\": true,
+          \\"esModuleInterop\\": true,
+          \\"module\\": \\"commonjs\\",
+          \\"moduleResolution\\": \\"node\\",
           \\"outDir\\": \\"build\\",
           \\"rootDir\\": \\"src\\",
-          \\"esModuleInterop\\": true,
           \\"strict\\": true,
-          \\"target\\": \\"es2015\\",
-          \\"moduleResolution\\": \\"node\\",
-          \\"declaration\\": true,
-          \\"module\\": \\"commonjs\\",
-          \\"allowJs\\": true
+          \\"target\\": \\"esnext\\",
+          \\"noEmit\\": true
         }
       }
       "
