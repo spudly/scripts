@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/spudly/scripts/compare/v1.0.2...v2.0.0) (2020-01-30)
+
+
+### Features
+
+* **ts:** add support for multiple typescript configs (cjs & esm) ([f44996a](https://github.com/spudly/scripts/commit/f44996a96f7a5da45def01e0560867cb821b1ee3))
+
+
+### BREAKING CHANGES
+
+* **ts:** build script now expects you to have 3 tsconfig files: tsconfig.json, tsconfig.build.cjs.json, & tsconfig.build.esm.json
+
 ## [1.0.2](https://github.com/spudly/scripts/compare/v1.0.1...v1.0.2) (2020-01-28)
 
 
